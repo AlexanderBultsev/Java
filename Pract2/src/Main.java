@@ -10,7 +10,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        // String array
+        // Переворот строки
         String[] array = {"Aa", "Bb", "Cc", "Dd", "Ee", "Ff"};
         System.out.println(Arrays.toString(array));
         reverse(array);

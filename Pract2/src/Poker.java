@@ -13,6 +13,7 @@ public class Poker {
                 deck.add(dignity + suit);
             }
         }
+        // Перемешивание колоды
         Collections.shuffle(deck, new Random());
         return deck;
     }

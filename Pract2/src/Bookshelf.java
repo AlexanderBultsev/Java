@@ -33,7 +33,7 @@ public class Bookshelf {
 
     public void sortByYear() {
         for (int i = 0; i < books.size(); i++) {
-            for (int j = i; j < books.size() - 1; j++) {
+            for (int j = 0; j < books.size() - 1; j++) {
                 if (books.get(j).getYear() > books.get(j+1).getYear()) {
                     Book tbook = books.get(j+1);
                     books.set(j+1, books.get(j));
