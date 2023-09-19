@@ -10,7 +10,4 @@ public abstract class Clothes {
         this.price = price;
         this.colour = colour;
     }
-
-    @Override
-    public abstract String toString();
 }
