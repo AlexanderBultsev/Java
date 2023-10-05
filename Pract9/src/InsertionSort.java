@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class InsertionSort {
-    public static void Sort(Comparable[] list) {
+    public static void insertionSort(Comparable[] list) {
         for (int i = 1; i < list.length; i++) {
             Comparable t = list[i];
             int j = i - 1;
@@ -18,7 +18,7 @@ public class InsertionSort {
                 new Student("Иванов", 42125),
                 new Student("Петров", 1265),
                 new Student("Сидоов", 346)};
-        Sort(students);
+        insertionSort(students);
         System.out.println(Arrays.toString(students));
     }
 }
