@@ -11,7 +11,7 @@ public class InsertionSort {
             }
             list[j + 1] = t;
         }
-    }ыфв
+    }
 
     public static void main(String[] args) {
         Comparable[] students = {
