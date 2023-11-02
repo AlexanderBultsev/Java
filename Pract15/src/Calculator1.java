@@ -44,41 +44,41 @@ public class Calculator1 extends JFrame {
             try {
                 double x1 = Double.parseDouble(numberField1.getText().trim());
                 double x2 = Double.parseDouble(numberField2.getText().trim());
-                JOptionPane.showMessageDialog(null, "Результат = " + (x1 + x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Результат = " + (x1 + x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
             }
             catch (NumberFormatException ne)
             {
-                JOptionPane.showMessageDialog( null, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog( this, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
             }
         });
         subButton.addActionListener(e -> {
             try {
                 double x1 = Double.parseDouble(numberField1.getText().trim());
                 double x2 = Double.parseDouble(numberField2.getText().trim());
-                JOptionPane.showMessageDialog(null, "Результат = " + (x1 - x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Результат = " + (x1 - x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
             }
             catch (NumberFormatException ne) {
-                JOptionPane.showMessageDialog( null, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog( this, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
             }
         });
         mulButton.addActionListener(e -> {
             try {
                 double x1 = Double.parseDouble(numberField1.getText().trim());
                 double x2 = Double.parseDouble(numberField2.getText().trim());
-                JOptionPane.showMessageDialog(null, "Результат = " + (x1 * x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Результат = " + (x1 * x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
             }
             catch (NumberFormatException ne) {
-                JOptionPane.showMessageDialog( null, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog( this, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
             }
         });
         divButton.addActionListener(e -> {
             try {
                 double x1 = Double.parseDouble(numberField1.getText().trim());
                 double x2 = Double.parseDouble(numberField2.getText().trim());
-                JOptionPane.showMessageDialog(null, "Результат = " + (x1 / x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Результат = " + (x1 / x2), "Результат", JOptionPane.INFORMATION_MESSAGE);
             }
             catch (NumberFormatException ne) {
-                JOptionPane.showMessageDialog( null, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog( this, "Ошибка в числах","Ошибка" , JOptionPane.ERROR_MESSAGE);
             }
         });
     }

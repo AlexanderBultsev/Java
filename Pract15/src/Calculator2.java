@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -161,7 +159,7 @@ public class Calculator2 extends JFrame {
         });
         buttonRes.addActionListener(e -> {
             try {
-                ArrayList<String> list = new ArrayList<String>(Arrays.asList(input.toString().split(" ")));
+                ArrayList<String> list = new ArrayList<>(Arrays.asList(input.toString().split(" ")));
                 input.append(calc(list));
             }
             catch (Exception exception) {
@@ -185,63 +183,44 @@ public class Calculator2 extends JFrame {
         if (list.isEmpty())
             return "";
         int i = 0;
-        ArrayList<Float> sum = new ArrayList<Float>();
-        ArrayList<String> sign = new ArrayList<String>();
+        ArrayList<Float> sum = new ArrayList<>();
+        ArrayList<String> sign = new ArrayList<>();
         sum.add((float) 0);
         sign.add("+");
         float next;
 
         for (String operand : list) {
             switch (operand) {
-                case "+", "-", "×", "÷":
-                    sign.set(i, operand);
-                    break;
-                case "(":
+                case "+", "-", "×", "÷" -> sign.set(i, operand);
+                case "(" -> {
                     i++;
-                    if(sum.size() < i + 1) {
+                    if (sum.size() < i + 1) {
                         sum.add((float) 0);
                         sign.add("+");
-                    }
-                    else {
+                    } else {
                         sum.set(i, (float) 0);
                         sign.set(i, "+");
                     }
-                    break;
-                case ")":
+                }
+                case ")" -> {
                     next = sum.get(i);
                     i--;
                     switch (sign.get(i)) {
-                        case "+":
-                            sum.set(i, sum.get(i) + next);
-                            break;
-                        case "-":
-                            sum.set(i, sum.get(i) - next);
-                            break;
-                        case "×":
-                            sum.set(i, sum.get(i) * next);
-                            break;
-                        case "÷":
-                            sum.set(i, sum.get(i) / next);
-                            break;
+                        case "+" -> sum.set(i, sum.get(i) + next);
+                        case "-" -> sum.set(i, sum.get(i) - next);
+                        case "×" -> sum.set(i, sum.get(i) * next);
+                        case "÷" -> sum.set(i, sum.get(i) / next);
                     }
-                    break;
-                default:
+                }
+                default -> {
                     next = Float.parseFloat(operand);
                     switch (sign.get(i)) {
-                        case "+":
-                            sum.set(i, sum.get(i) + next);
-                            break;
-                        case "-":
-                            sum.set(i, sum.get(i) - next);
-                            break;
-                        case "×":
-                            sum.set(i, sum.get(i) * next);
-                            break;
-                        case "÷":
-                            sum.set(i, sum.get(i) / next);
-                            break;
+                        case "+" -> sum.set(i, sum.get(i) + next);
+                        case "-" -> sum.set(i, sum.get(i) - next);
+                        case "×" -> sum.set(i, sum.get(i) * next);
+                        case "÷" -> sum.set(i, sum.get(i) / next);
                     }
-                    break;
+                }
             }
         }
         return " = " + sum.get(0);
