@@ -4,7 +4,7 @@ import java.awt.*;
 public class Menu extends JFrame {
     final int WIDTH = 244;
     final int HEIGHT = 310;
-    Font font = new Font("Serif", Font.PLAIN, 20);
+    final Font font = new Font("Serif", Font.PLAIN, 20);
 
     JPanel menuPanel = new JPanel(new FlowLayout());
     JMenuBar menuBar = new JMenuBar();
