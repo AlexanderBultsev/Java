@@ -7,8 +7,9 @@ public class Area extends JFrame {
 
     public Area() {
         setTitle("Карта");
-        setSize(600, 600);
+        setSize(300, 300);
         setResizable(false);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -18,7 +19,7 @@ public class Area extends JFrame {
         panelC.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                JOptionPane.showMessageDialog(panelC, "Добро пожаловать в ЦАО");
+            JOptionPane.showMessageDialog(panelC, "Добро пожаловать в ЦАО");
             }
         });
 
@@ -28,7 +29,7 @@ public class Area extends JFrame {
         panelW.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                JOptionPane.showMessageDialog(panelW, "Добро пожаловать в ЗАО");
+            JOptionPane.showMessageDialog(panelW, "Добро пожаловать в ЗАО");
             }
         });
 
@@ -38,7 +39,7 @@ public class Area extends JFrame {
         panelS.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                JOptionPane.showMessageDialog(panelS, "Добро пожаловать в ЮАО");
+            JOptionPane.showMessageDialog(panelS, "Добро пожаловать в ЮАО");
             }
         });
 
@@ -48,7 +49,7 @@ public class Area extends JFrame {
         panelN.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                JOptionPane.showMessageDialog(panelN, "Добро пожаловать в САО");
+            JOptionPane.showMessageDialog(panelN, "Добро пожаловать в САО");
             }
         });
 
@@ -58,7 +59,7 @@ public class Area extends JFrame {
         panelE.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                JOptionPane.showMessageDialog(panelE, "Добро пожаловать в ВАО");
+            JOptionPane.showMessageDialog(panelE, "Добро пожаловать в ВАО");
             }
         });
     }

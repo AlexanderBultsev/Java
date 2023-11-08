@@ -24,7 +24,7 @@ public class TextRedactor extends JFrame {
         menuBar.add(fontMenu);
         setJMenuBar(menuBar);
 
-        JMenuItem color1 = new JMenuItem("Черный");
+        JMenuItem color1 = new JMenuItem("Чёрный");
         colorMenu.add(color1);
         color1.addActionListener(e -> textArea.setForeground(Color.BLACK));
         JMenuItem color2 = new JMenuItem("Синий");
